@@ -1,0 +1,342 @@
+@import './variables';
+@mixin button-icon($image) {
+    background-image: url('../img/#{$image}');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  // Основные стили
+  body {
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+  }
+  
+  .menu {
+    padding: 24px 16px;
+    min-height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+  
+    &__border,
+    &__border-pad {
+      height: 32px;
+      border-left: 2px solid $border-light;
+    }
+  
+    &__btn,
+    .title__btn,
+    &__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: $btn-color;
+      border: none;
+      position: relative;
+      text-align: center;
+    }
+  
+    &__icon-img-call,
+    &__icon-img-chat {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    &__logo-img {
+      width: 96.55px;
+      height: 50.81px;
+    }
+  
+    .burger {
+      @include button-icon('burger.svg');
+    }
+  
+    .repair {
+      @include button-icon('repair.svg');
+    }
+  
+    .checkstatus {
+      @include button-icon('check.svg');
+    }
+  
+    .profile {
+      @include button-icon('profile.svg');
+    }
+  
+    &__border-pad,
+    &__icon {
+      display: none;
+    }
+  }
+  
+  main {
+    background-color: $main-color;
+    padding-bottom: 40px;
+  }
+  
+  .title {
+    padding-top: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+    &__border {
+      height: 40px;
+      width: 4px;
+      border-left: 4px solid $highlight-color;
+      border-radius: 0 4px 4px 0;
+    }
+  
+    &__text {
+      margin: 0;
+      font-size: 28px;
+      padding-left: 12px;
+    }
+  
+    &__label {
+      display: none;
+    }
+  }
+  
+  .navigation {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      gap: 0;
+      align-items: center;
+      padding-left: 16px;
+      margin: 24px 0 0 0;
+      list-style-type: none;
+      overflow: auto;
+    }
+  
+    &__item {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      height: 40px;
+  
+      &:first-child {
+        background-color: white;
+        border: 2px solid $selected-color;
+        border-radius: 6px;
+      }
+    }
+  
+    &__link {
+      text-decoration: none;
+      color: $text-color;
+      font-size: 16px;
+      padding: 8px 9.3px 8px 16.54px;
+      white-space: nowrap;
+    }
+  }
+  
+  .info {
+    &__block {
+      width: 288px;
+      height: 90px;
+      font-size: 14px;
+      margin: 24px 16px 0;
+      margin-bottom: 16px;
+      overflow: hidden;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+    }
+  
+    &__text {
+      margin: 0;
+  
+      &--hidden {
+        display: none;
+      }
+    }
+  
+    &__next {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 16px;
+  
+      &-text {
+        font-size: 16px;
+        height: 24px;
+        margin: 0;
+      }
+  
+      &-btn {
+        @include button-icon('next.svg');
+        background-color: $main-color;
+        width: 7.41px;
+        height: 10.29px;
+        border: none;
+        padding: 0;
+        margin-left: 24.29px;
+        margin-right: 16.29px;
+      }
+    }
+  
+    &__pic-img {
+      width: 320px;
+      height: 176px;
+      border-radius: 0;
+    }
+  }
+  
+  // Медиа-запросы
+  @media (min-width: 768px) {
+    .menu {
+      padding: 18.59px 24px;
+  
+      &__border-pad,
+      &__icon {
+        display: block;
+      }
+  
+      > :nth-child(4) {
+        margin-left: auto;
+      }
+  
+      > :nth-child(1),
+      > :nth-child(2),
+      > :nth-child(6),
+      > :nth-child(7) {
+        margin-right: 20px;
+      }
+  
+      > :nth-child(4),
+      > :nth-child(5),
+      > :nth-child(8) {
+        margin-right: 16px;
+      }
+    }
+  
+    .title {
+      &__text {
+        padding-left: 24px;
+      }
+    }
+  
+    .info {
+      margin-left: 24px;
+      margin-top: 32px;
+      width: 720px;
+      height: 208px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      grid-template-areas: "info__block info__pic";
+  
+      &__block {
+        grid-area: info__block;
+        width: 312px;
+        height: 160px;
+        margin: 0;
+        padding: 0;
+      }
+  
+      &__next {
+        grid-area: info__block;
+        align-self: end;
+        margin-bottom: 20px;
+  
+        &-btn {
+          margin-left: 10px;
+        }
+      }
+  
+      &__pic-img {
+        grid-area: info__pic;
+        width: 360px;
+        height: 208px;
+        border-radius: 6px 0 0 6px;
+      }
+  
+      &__text--hidden {
+        display: block;
+        margin-top: 30px;
+      }
+    }
+  }
+  
+  @media (min-width: 1120px) {
+    .menu {
+      display: none;
+    }
+  
+    .title {
+      padding-top: 42px;
+      padding-right: 25px;
+  
+      :nth-child(3) {
+        margin-left: auto;
+        margin-right: 32px;
+      }
+  
+      &__text {
+        padding-left: 32px;
+      }
+  
+      &__btn {
+        display: block;
+      }
+  
+      &__label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  
+    .navigation {
+      &__list {
+        overflow: visible;
+        grid-template-columns: repeat(5, auto);
+        padding: 0 25px 0 32px;
+      }
+    }
+  
+    .info {
+      margin: 0 0 0 34px;
+      width: auto;
+      height: 307px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "info__block info__pic";
+  
+      &__block {
+        width: 490px;
+        height: 175px;
+      }
+  
+      &__text {
+        width: 490px;
+        height: 160px;
+        margin-top: 16.22px;
+      }
+  
+      &__next {
+        grid-area: info__block;
+        align-self: end;
+        margin-bottom: 110px;
+  
+        &-btn {
+          margin-left: 5px;
+        }
+      }
+  
+      &__pic-img {
+        width: 531.35px;
+        height: 307px;
+        margin-top: 7px;
+        margin-left: auto;
+        margin-right: 29px;
+      }
+    }
+  }

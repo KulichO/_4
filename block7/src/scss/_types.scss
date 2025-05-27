@@ -1,0 +1,203 @@
+@import './variables';
+
+.types {
+    &__title {
+      width: 100%;
+      height: 80px;
+      border-top: solid 1px $border-color;
+      background-image: linear-gradient(to right, $main-color, white);
+  
+      &--name {
+        color: $text-color;
+        width: 288px;
+        height: 48px;
+        margin: 16px;
+        font-size: 16px;
+      }
+    }
+  
+    &__slider--mob {
+      display: flex;
+      background-color: $main-color;
+      height: 170px;
+      margin: auto;
+      padding-top: 16px !important;
+    }
+  
+    &__list--mob {
+      display: flex;
+      list-style-type: none;
+      padding: 0 24px 0 16px;
+      margin: 0;
+    }
+  
+    &__container {
+      display: flex !important;
+      height: 160px !important;
+      width: 240px !important;
+      border: 1px solid $border-light;
+      border-radius: 6px;
+      background-color: white;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+  
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $btn-color;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      margin-right: 16px;
+    }
+  
+    &__arrow {
+      display: inline-block;
+      border-right: 2px solid $btn-color;
+      border-top: 2px solid $btn-color;
+      transform: rotate(45deg);
+      height: 8px;
+      width: 8px;
+      margin-right: 2px;
+    }
+  
+    &__link {
+      display: inline-block;
+      height: auto;
+      margin: 0 0 0 16px;
+      line-height: 0;
+      padding: 0;
+    }
+  
+    .swiper-pagination-bullet {
+      background-color: $pagination-bullet !important;
+    }
+  
+    .swiper-pagination-bullet-active {
+      background-color: $pagination-active !important;
+    }
+  
+    .next, &__slider {
+      display: none;
+    }
+  
+    @media (min-width: 768px) {
+      &__slider--mob {
+        display: none !important;
+      }
+  
+      &__slider {
+        display: block;
+        padding-top: 16px;
+        background-color: $main-color;
+      }
+  
+      &__list {
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-evenly;
+        height: 165px;
+        margin: 0;
+        padding: 0 24px 0 16px;
+        row-gap: 12px;
+        column-gap: 16px;
+        overflow: hidden;
+      }
+  
+      &__item {
+        display: flex;
+        height: 72px;
+        width: 240px;
+        border: 1px solid $border-light;
+        border-radius: 6px;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      &__list--show {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-evenly;
+        height: auto;
+        margin: 0;
+        row-gap: 12px;
+      }
+  
+      .next {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $main-color;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        cursor: pointer;
+        padding-left: 16px;
+      }
+  
+      .button {
+        background: none;
+        border: none;
+        font-family: $font;
+        font-size: 16px;
+  
+        &--show::before {
+          content: '';
+          display: inline-block;
+          background-image: url('../img/next.svg');
+          background-color: $main-color;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 8px;
+          height: 11px;
+          margin-left: 0;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+  
+        &--hide::before {
+          content: '';
+          display: inline-block;
+          background-image: url('../img/next.svg');
+          background-color: $main-color;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 8px;
+          height: 11px;
+          margin-left: 0;
+          margin-right: 10px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  
+    @media (min-width: 1120px) {
+      &__title {
+        padding-left: 18px;
+      }
+  
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-evenly;  
+        margin: 0;
+      }
+  
+      &__list--show {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-evenly;
+        height: auto;
+        margin: 0;
+      }
+  
+      .next {
+        padding-left: 30px;
+      }
+    }
+  }

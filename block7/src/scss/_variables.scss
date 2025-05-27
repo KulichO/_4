@@ -1,0 +1,27 @@
+$main-color: #F8F8F8;
+$btn-color: #FF3E79;
+$elm-color: #41F6D7;
+$text-color: #7E7E82;
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Regular.woff2') format('woff2'),
+         url('../fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *::after, *::before {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'TT Lakes';
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+  }

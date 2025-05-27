@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>блок6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  </head>
+
+  <body>
+
+    <nav class="menu">
+      <button class="menu__btn burger"></button>
+      <div class="menu__border-pad"></div>
+      <div class="menu__logo"><img class="menu__logo-img" src="img/logo.svg" alt="logo"></div>
+      <a class="menu__icon" href="#"><img class="menu__icon-img-call" src="img/call.svg" alt="call"></a>
+      <a class="menu__icon" href="#"><img class="menu__icon-img-chat" src="../src/img/chat.svg" alt="chat"></a>
+      <button class="menu__icon profile"></button>  
+      <div class="menu__border"></div>
+      <button class="menu__btn repair"></button>
+      <button class="menu__btn checkstatus"></button>
+    </nav>
+  
+    <main>
+
+      <header class="title">
+        <div class="title__border"></div>
+        <h1 class="title__text">Услуги и сервисы</h1> 
+        <div class="title__label">Оставить заявку<button class="title__btn repair"></button></div>
+  
+        <div class="title__label">Статус ремонта<button class="title__btn checkstatus"></button></div>
+      </header>
+  
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Ремонтируемые устройства</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Ремонтируемые бренды</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Цены на услуги</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Адреса сервисных центров</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Специальные цены</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Отзывы</a>
+          </li>
+        </ul>
+      </nav>
+  
+      <article class="info">
+        <div class="info__block">
+          <p class="info__text">
+            <span class="info__text--visible">
+              Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+              Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+            </span><br>
+            <span class="info__text--hidden">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+              количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
+              советуют нас родным и близким.
+            </span>
+          </p>
+        </div>
+  
+        <div class="info__next">
+          <button class="info__next-btn"></button>
+          <p class="info__next-text">
+            Читать далее
+          </p>
+        </div>
+  
+        <div class="info__pic">
+          <img class="info__pic-img" src="../src/img/img.jpg" alt="picture">
+        </div>
+      </article>
+
+      <section class="brands">
+        <div class="brands__title"><h2 class="brands__title--name">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2></div>
+    
+        <div class="brands__slider--mob swiper">
+            <ul class="brands__list--mob swiper-wrapper">
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                        <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/lenovo.svg" alt="lenovo"></a>
+                        <div class="brands__img"><div class="brands__arrow"></div></div>
+                    </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/acer.svg" alt="acer"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/apple.svg" alt="apple"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/bosch.svg" alt="bosch"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/hp.svg" alt="hp"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/samsung.svg" alt="samsung"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/sony.svg" alt="sony"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/view.svg" alt="view"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/lenovo.svg" alt="lenovo"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/acer.svg" alt="acer"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+                <li class="brands__item--mob swiper-slide">
+                    <div class="brands__container">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/apple.svg" alt="apple"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </div>
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+    
+    
+        <div class="brands__slider">
+            <ul class="brands__list">
+    
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/lenovo.svg" alt="lenovo"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/acer.svg" alt="acer"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/apple.svg" alt="apple"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/bosch.svg" alt="bosch"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/hp.svg" alt="hp"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/samsung.svg" alt="samsung"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/sony.svg" alt="sony"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/view.svg" alt="view"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/lenovo.svg" alt="lenovo"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/acer.svg" alt="acer"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+                <li class="brands__item">
+                    <a class="brands__link" href="#"><img class="brands__logo" src="../src/img/apple.svg" alt="apple"></a>
+                    <div class="brands__img"><div class="brands__arrow"></div></div>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="next next--show">
+            <button class="button button--show" type="button">Показать все</button>
+        </div>
+        </section>
+  
+    </main>
+
+
+
+
+    
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>  
+  </body>
+</html>

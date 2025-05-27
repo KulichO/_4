@@ -19,7 +19,7 @@
     &__slider--mob {
       display: flex;
       background-color: $main-color;
-      height: 170px;
+      height: 220px;
       margin: auto;
       padding-top: 16px !important;
     }
@@ -32,14 +32,16 @@
     }
   
     &__container {
-      display: flex !important;
+      display: grid !important;
       height: 160px !important;
       width: 240px !important;
       border: 1px solid $border-light;
       border-radius: 6px;
       background-color: white;
-      justify-content: space-between !important;
-      align-items: center !important;
+      grid-template-columns: 1fr 60px;
+      grid-template-areas: 'text pic';
+    //   justify-content: space-between !important;
+    //   align-items: center !important;
     }
   
     &__img {
@@ -50,7 +52,10 @@
       border-radius: 50%;
       height: 40px;
       width: 40px;
-      margin-right: 16px;
+      margin: 0;
+      grid-area: 'pic';
+      align-self: end;
+      margin-bottom: 16px;
     }
   
     &__arrow {
@@ -64,11 +69,15 @@
     }
   
     &__link {
-      display: inline-block;
-      height: auto;
-      margin: 0 0 0 16px;
-      line-height: 0;
+    //   display: inline-block;
+    //   height: auto;
+      margin: 16px 0 0 16px;
+    //   line-height: 0;
       padding: 0;
+      text-decoration: none;
+      color: black;
+      grid-area: 'text';
+      align-self: start;
     }
   
     .swiper-pagination-bullet {
@@ -79,7 +88,7 @@
       background-color: $pagination-active !important;
     }
   
-    .next, &__slider {
+    &__next, &__slider {
       display: none;
     }
   
@@ -108,14 +117,26 @@
       }
   
       &__item {
-        display: flex;
-        height: 72px;
+        display: grid;
+        height: 160px;
         width: 240px;
         border: 1px solid $border-light;
         border-radius: 6px;
         background-color: white;
-        justify-content: space-between;
-        align-items: center;
+        grid-template-columns: 1fr 60px;
+        grid-template-areas: 'text pic';
+        // justify-content: space-between;
+        // align-items: center;
+      }
+
+      &__link {
+        grid-area: 'text';
+        align-self: start;
+      }
+
+      &__img {
+        grid-area: 'pic';
+        align-self: end;
       }
   
       &__list--show {
@@ -127,7 +148,7 @@
         row-gap: 12px;
       }
   
-      .next {
+      &__next {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -138,7 +159,7 @@
         padding-left: 16px;
       }
   
-      .button {
+      .button-types {
         background: none;
         border: none;
         font-family: $font;

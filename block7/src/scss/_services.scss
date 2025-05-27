@@ -1,4 +1,5 @@
 @import './variables';
+
 @mixin button-icon($image) {
     background-image: url('../img/#{$image}');
     background-size: auto;
@@ -283,17 +284,47 @@
         padding-left: 32px;
       }
   
-      &__btn {
-        display: block;
-      }
-  
       &__label {
         display: flex;
         align-items: center;
         gap: 8px;
       }
+
+      &__btn {
+        &.repair {
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $btn-color;
+            border: none;
+            position: relative;
+            text-align: center;
+            background-image: url('../img/repair.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &.checkstatus {
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $btn-color;
+            border: none;
+            position: relative;
+            text-align: center;
+            background-image: url('../img/check.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+      }
     }
-  
+
     .navigation {
       &__list {
         overflow: visible;

@@ -4,6 +4,12 @@
   font-weight: 400;
   font-style: normal; }
 
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Bold.woff2) format("woff2"), url(./fonts/TTLakes-Regular.woff) format("woff");
+  font-weight: 700;
+  font-style: bold; }
+
 html {
   box-sizing: border-box; }
 
@@ -21,6 +27,12 @@ body {
   src: url(./fonts/TTLakes-Regular.woff2) format("woff2"), url(./fonts/TTLakes-Regular.woff) format("woff");
   font-weight: 400;
   font-style: normal; }
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Bold.woff2) format("woff2"), url(./fonts/TTLakes-Regular.woff) format("woff");
+  font-weight: 700;
+  font-style: bold; }
 
 html {
   box-sizing: border-box; }
@@ -308,6 +320,12 @@ main {
   font-weight: 400;
   font-style: normal; }
 
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Bold.woff2) format("woff2"), url(./fonts/TTLakes-Regular.woff) format("woff");
+  font-weight: 700;
+  font-style: bold; }
+
 html {
   box-sizing: border-box; }
 
@@ -330,7 +348,8 @@ body {
     width: 288px;
     height: 48px;
     margin: 16px;
-    font-size: 16px; }
+    font-size: 16px;
+    font-weight: 400; }
 
 .brands__slider--mob {
   display: flex;
@@ -489,6 +508,12 @@ body {
   font-weight: 400;
   font-style: normal; }
 
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Bold.woff2) format("woff2"), url(./fonts/TTLakes-Regular.woff) format("woff");
+  font-weight: 700;
+  font-style: bold; }
+
 html {
   box-sizing: border-box; }
 
@@ -511,7 +536,8 @@ body {
     width: 288px;
     height: 48px;
     margin: 16px;
-    font-size: 16px; }
+    font-size: 16px;
+    font-weight: 400; }
 
 .types__slider--mob {
   display: flex;
@@ -673,6 +699,118 @@ body {
     margin: 0; }
   .types .next {
     padding-left: 30px; } }
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Regular.woff2) format("woff2"), url(./fonts/TTLakes-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Bold.woff2) format("woff2"), url(./fonts/TTLakes-Regular.woff) format("woff");
+  font-weight: 700;
+  font-style: bold; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'TT Lakes';
+  margin: 0;
+  padding: 0;
+  min-width: 320px; }
+
+p {
+  margin: 0; }
+
+.prices__title {
+  width: 100%;
+  height: 80px;
+  border-top: solid 1px #D9FFF5;
+  background-image: linear-gradient(to right, #F8F8F8, white); }
+  .prices__title--name {
+    color: #7E7E82;
+    width: 288px;
+    height: 48px;
+    margin: 16px;
+    font-size: 16px;
+    font-weight: 400; }
+
+.prices__slider--mob {
+  display: flex;
+  background-color: #F8F8F8;
+  height: 260px;
+  margin: auto;
+  padding-top: 16px !important; }
+
+.prices__list--mob {
+  display: flex;
+  list-style-type: none;
+  padding: 0 24px 0 16px;
+  margin: 0; }
+
+.prices__container {
+  display: grid !important;
+  height: 200px !important;
+  width: 260px !important;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 6px;
+  background-color: white;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 'services' 'price' 'due'; }
+
+.prices__category {
+  display: block;
+  grid-area: services;
+  padding: 16px 16px 0 16px; }
+
+.prices__info {
+  display: block;
+  grid-area: price;
+  padding: 10px 16px 0 16px; }
+
+.prices__due {
+  display: flex;
+  grid-area: due;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px 16px 16px; }
+
+.prices__btn {
+  border: none;
+  border-radius: 16px;
+  height: 32px;
+  width: 119px;
+  padding: 0;
+  background-color: #FF3E79;
+  color: white;
+  font-family: "TT Lakes";
+  font-weight: 700 !important;
+  font-size: 12px; }
+
+.prices__arrow {
+  display: inline-block;
+  border-right: 2.8px solid white;
+  border-top: 2.8px solid white;
+  transform: rotate(45deg);
+  height: 4px;
+  width: 4px;
+  margin-left: 10px; }
+
+.prices__name {
+  color: #7E7E82; }
+
+.swiper-pagination-bullet {
+  background-color: #DDDDDD !important; }
+
+.swiper-pagination-bullet-active {
+  background-color: #B5B6BC !important; }
 
 body {
   font-family: 'TT Lakes';

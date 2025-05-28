@@ -211,13 +211,11 @@ main {
   .title__text {
     padding-left: 24px; }
   .info {
-    margin-left: 24px;
-    margin-top: 32px;
-    width: 720px;
-    height: 208px;
+    margin: 32px 24px 20px 24px;
+    width: auto;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
     grid-template-areas: "info__block info__pic"; }
     .info__block {
       grid-area: info__block;
@@ -231,8 +229,13 @@ main {
       margin-bottom: 20px; }
       .info__next-btn {
         margin-left: 10px; }
+    .info__pic {
+      width: 532px;
+      margin-left: auto; }
     .info__pic-img {
+      display: block;
       grid-area: info__pic;
+      margin-left: auto;
       width: 360px;
       height: 208px;
       border-radius: 6px 0 0 6px; }
@@ -288,9 +291,9 @@ main {
     grid-template-columns: repeat(5, auto);
     padding: 0 25px 0 32px; }
   .info {
-    margin: 0 0 0 34px;
+    margin: 0 24px 40px 34px;
     width: auto;
-    height: 307px;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "info__block info__pic"; }
@@ -308,7 +311,7 @@ main {
       .info__next-btn {
         margin-left: 5px; }
     .info__pic-img {
-      width: 531.35px;
+      width: 531px;
       height: 307px;
       margin-top: 7px;
       margin-left: auto;
@@ -420,7 +423,7 @@ body {
     display: grid;
     list-style-type: none;
     grid-template-columns: repeat(3, auto);
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 165px;
     margin: 0;
     padding: 0 24px 0 16px;
@@ -612,7 +615,7 @@ body {
     display: grid;
     list-style-type: none;
     grid-template-columns: repeat(3, auto);
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 165px;
     margin: 0;
     padding: 0 24px 0 16px;
@@ -638,7 +641,7 @@ body {
   .types__list--show {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: auto;
     margin: 0;
     row-gap: 12px; }
@@ -689,12 +692,12 @@ body {
   .types__list {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0; }
   .types__list--show {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: auto;
     margin: 0; }
   .types .next {
@@ -848,7 +851,7 @@ p {
   .prices__table {
     display: block; }
   .prices__table {
-    padding: 0 16px;
+    padding: 0 24px;
     width: 100%; }
   .table {
     width: 100%;

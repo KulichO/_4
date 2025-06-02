@@ -214,6 +214,15 @@ p {
         padding-left: 16px; 
     }
 
+
+    // возможно через это можно прижать кнопку к правому краю, проверить
+    // &__order {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // padding: 10px 16px 16px 16px;
+    // }
+
     &__btn {
         border: none;
         border-radius: 16px;

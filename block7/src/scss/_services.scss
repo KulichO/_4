@@ -7,12 +7,15 @@
     background-position: center;
   }
   
-  // Основные стили
   body {
     font-family: $font;
     margin: 0;
     padding: 0;
     min-width: 320px;
+  }
+
+  .sidebar {
+    display: none;
   }
   
   .menu {
@@ -274,10 +277,220 @@
     }
   }
   
-  @media (min-width: 1120px) {
+  @media (min-width: 1366px) {
+
+    .layout {
+      display: flex;
+    }
+
     .menu {
       display: none;
     }
+
+    .sidebar {
+      display: block;
+      width: 320px;
+
+      &__header {
+        padding-top: 42px;
+        padding-right: 30px;
+        padding-left: 8px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+    
+        // > :nth-child(3) {
+        //   margin-left: auto;
+        // }
+      }
+    
+      &__logo-img {
+        width: 97px;
+        height: 51px;
+        margin-left: 17px;
+      }
+    
+      &__list {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 46px 0 0;
+        padding: 0;
+      }
+    
+      &__item {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        position: relative;
+    
+        &::before {
+          content: '';
+          width: 4px;
+          height: 32px;
+          background-image: url('../img/highlight.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          opacity: 0;
+        }
+
+        &--active{
+          display: flex;
+          align-items: center;
+          height: 32px;
+          position: relative;
+        }
+    
+        &--active::before {
+          content: '';
+          width: 4px;
+          height: 32px;
+          background-image: url('../img/highlight.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    
+      &__link {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        white-space: nowrap;
+        margin-left: 20px;
+        font-family: $font;
+    
+        &--active {
+          text-decoration: none;
+          color: $text-color;
+          margin-left: 20px;
+        }
+      }
+    
+      &__footer {
+        margin-top: 268px;
+        margin-left: 24px;
+      }
+    
+      &__icons {
+        display: flex;
+        gap: 16px;
+      }
+    
+      &__contacts {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+      }
+    
+      &__email,
+      &__phone {
+        text-decoration: none;
+        color: black;
+        font-family: $font;
+      }
+    
+      &__email {
+        font-size: 16px;
+      }
+    
+      &__phone {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 12px;
+      }
+    
+      &__lang {
+        margin-top: 40px;
+        padding: 0;
+      }
+    }
+    
+    // Кнопки и иконки
+
+    .btn,
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: $btn-color;
+      border: none;
+      position: relative;
+      text-align: center;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    
+    .btn {
+      &--close {
+        display: none;
+      }
+    
+      &--search {
+        background-image: url('../img/search.svg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: auto;
+      }
+    
+      &--profile {
+        background-image: url('../img/profile.svg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    
+    .icon {
+      &--call {
+        background-image: url('../img/call.svg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    
+      &--chat {
+        background-image: url('../img/chat.svg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    
+    // Языковой переключатель
+    .sidebar__lang-btn {
+      all: unset;
+      font-size: 16px;
+      margin-right: 7px;
+      font-family: $font;
+      cursor: pointer;
+    
+      &:hover {
+        transform: scale(1.2);
+      }
+    
+    }
+    
+    .lang {
+      &__btn-ru,
+      &__btn-en,
+      &__btn-ch {
+        display: none;
+      }
+
+      &--active {
+        color: $text-color;
+      }
+    
+      cursor: pointer;
+
+    }
+
   
     .title {
       padding-top: 42px;

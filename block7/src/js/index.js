@@ -1,5 +1,7 @@
 import '../scss/style.scss'
 
+//   ЧИТАТЬ ДАЛЕЕ БРЕНДЫ
+
 let brandsShowButton = document.querySelector('.button--show');
 let brandsTextChange = document.querySelector('.next--show');
 let brandsList = document.querySelector('.brands__list');
@@ -16,6 +18,8 @@ brandsShowButton.addEventListener ('click', function(){
     }
 
 });
+
+//   ЧИТАТЬ ДАЛЕЕ ТИПЫ
 
 let typesShowButton = document.querySelector('.button-types--show');
 let typesTextChange = document.querySelector('.types--show');
@@ -35,6 +39,9 @@ typesShowButton.addEventListener ('click', function(){
 });
 
 
+
+//   СВАЙПЕР
+
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -46,6 +53,8 @@ const swiper = new Swiper('.swiper', {
     },
 
   })
+
+//   ОТКРЫТИЕ ОСНОВНОГО МЕНЮ
 
   let burgerBtn = document.querySelector('.burger');
   let asideMenu = document.querySelector('.sidebar');
@@ -66,6 +75,8 @@ const swiper = new Swiper('.swiper', {
     asideMenu.classList.remove('sidebar--active');
     backGround.classList.remove('blur--active');
   })
+
+//   ОТКРЫТИЕ МЕНЮ ОБРАТНОЙ СВЯЗИ
 
   let chatBtn = document.querySelector('.menu__icon-img-chat');
   let fdbckMenu = document.querySelector('.feedback');
@@ -90,6 +101,43 @@ const swiper = new Swiper('.swiper', {
   chat.addEventListener('click', function(){
     fdbckMenu.classList.add('feedback--active');
     asideMenu.classList.remove('sidebar--active');
+    backGround.classList.add('blur--active');
   })
+
+  //   ОТКРЫТИЕ МЕНЮ ЗВОНКА
+
+  let phoneMenu = document.querySelector('.phone');
+  let phoneClose = document.querySelector('.phone__close');
+  let phone = document.querySelector('.menu__icon-img-call');
+  let phoneBtn = document.querySelector('.icon--call');
+
+  phoneBtn.addEventListener('click', function(){
+    phoneMenu.classList.add('phone--active');
+    backGround.classList.add('blur--active');
+    asideMenu.classList.remove('sidebar--active');
+  })
+
+  phoneClose.addEventListener('click', function(){
+    phoneMenu.classList.remove('phone--active');
+    backGround.classList.remove('blur--active');
+  })
+
+  backGround.addEventListener('click', function(){
+    phoneMenu.classList.remove('phone--active');
+    backGround.classList.remove('blur--active');
+  })
+
+  phone.addEventListener('click', function(){
+    phoneMenu.classList.add('phone--active');
+    asideMenu.classList.remove('sidebar--active');
+    backGround.classList.add('blur--active');
+  })
+
+
+
+
+
+
+  
 
 

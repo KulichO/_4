@@ -1,8 +1,7 @@
 @import './variables';
 @import './services';
 
-
-.feedback {
+.phone {
     min-width: 320px;
     max-width: 360px;
     display: flex;
@@ -66,9 +65,7 @@
         flex-direction: column;
         row-gap: 16px;
     
-        > :nth-child(2),
-        > :nth-child(3),
-        > :nth-child(4) {
+        > :nth-child(2) {
             height: 48px;
             width: auto;
             margin-left: 16px;
@@ -79,20 +76,6 @@
             color: $pagination-active;
             font-size: 16px;
             padding-left: 16px;
-        }
-
-        > :nth-child(5) {
-            height: 118px;
-            width: auto;
-            margin-left: 16px;
-            margin-right: 16px;
-            border: 1px solid $border-light;
-            border-radius: 8px;
-            font-family: $font;
-            color: $pagination-active;
-            font-size: 16px;
-            padding-left: 16px;
-            padding-top: 12px;
         }
     }
 
@@ -142,4 +125,3 @@
     }
 
 }
-

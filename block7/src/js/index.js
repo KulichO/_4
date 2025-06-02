@@ -50,12 +50,46 @@ const swiper = new Swiper('.swiper', {
   let burgerBtn = document.querySelector('.burger');
   let asideMenu = document.querySelector('.sidebar');
   let closeBtn = document.querySelector('.btn--close');
-  let backGround = document.querySelector('.main');
+  let backGround = document.querySelector('.blur');
 
-  burgerBtn.addEventListener ('click', function(){
+  burgerBtn.addEventListener('click', function(){
     asideMenu.classList.add('sidebar--active');
+    backGround.classList.add('blur--active');
   })
 
-  closeBtn.addEventListener ('click', function(){
+  closeBtn.addEventListener('click', function(){
+    asideMenu.classList.remove('sidebar--active');
+    backGround.classList.remove('blur--active');
+  })
+
+  backGround.addEventListener('click', function(){
+    asideMenu.classList.remove('sidebar--active');
+    backGround.classList.remove('blur--active');
+  })
+
+  let chatBtn = document.querySelector('.menu__icon-img-chat');
+  let fdbckMenu = document.querySelector('.feedback');
+  let fdbckClose = document.querySelector('.feedback__close');
+  let chat = document.querySelector('.icon--chat');
+
+  chatBtn.addEventListener('click', function(){
+    fdbckMenu.classList.add('feedback--active');
+    backGround.classList.add('blur--active');
+  })
+
+  fdbckClose.addEventListener('click', function(){
+    fdbckMenu.classList.remove('feedback--active');
+    backGround.classList.remove('blur--active');
+  })
+
+  backGround.addEventListener('click', function(){
+    fdbckMenu.classList.remove('feedback--active');
+    backGround.classList.remove('blur--active');
+  })
+
+  chat.addEventListener('click', function(){
+    fdbckMenu.classList.add('feedback--active');
     asideMenu.classList.remove('sidebar--active');
   })
+
+

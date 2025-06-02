@@ -13,9 +13,6 @@
 
   <body>
 
-
-
-
     <div class="layout">
 
     <aside class="sidebar">
@@ -66,7 +63,6 @@
                 <a class="sidebar__phone" href="tel:88008908900"><b>8 800 890 8900</b></a>
             </div>
 
-
             <ul class="sidebar__lang">
                 <li class="sidebar__lang-btn">
                     <label class="lang lang--active">
@@ -92,8 +88,7 @@
 
     </aside>
 
-  
-    <main class="main">
+    <main>
 
         <nav class="menu">
             <button class="menu__btn burger"></button>
@@ -296,11 +291,7 @@
         </div>
         </section>
 
-
-
         <!-- РАЗДЕЛ ТИПЫ -->
-
-
 
         <section class="types">
           <div class="types__title"><h2 class="types__title--name">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2></div>
@@ -347,7 +338,6 @@
               <div class="swiper-pagination"></div>
           </div>
       
-      
           <div class="types__slider">
               <ul class="types__list">
       
@@ -384,7 +374,6 @@
           </section>
 
           <!-- РАЗДЕЛ ЦЕНЫ -->
-
 
           <section class="prices">
             <div class="prices__title"><h2 class="prices__title--name">ЦЕНЫ НА УСЛУГИ</h2></div>
@@ -550,7 +539,28 @@
         </footer>
 
     </main>
+
+        <aside class="feedback">
+            <div class="feedback__button">
+                <button class="feedback__close"></button>
+            </div>
+
+            <form class="feedback__form">
+                <h2 class="feedback__title">Обратная связь</h2>
+                <input type="text" placeholder="Имя" class="feedback__name">
+                <input type="text" placeholder="Телефон" class="feedback__phone">
+                <input type="text" placeholder="Электронная почта" class="feedback__mail">
+                <textarea placeholder="Сообщение" class="feedback__text"></textarea>
+                <p class="feedback__spoiler">Нажимая “отправить”, вы даете согласие на <span class="feedback__highlight">обработку 
+                    персональных данных</span> и соглашаетесь с нашей <span class="feedback__highlight">политикой конфиденциальности</span></p>
+                <input type="submit" value="" class="feedback__sbm">
+            </form>
+
+        </aside>
+
     </div>
+
+    <div class="blur"></div>
 
     
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

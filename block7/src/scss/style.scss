@@ -3,10 +3,21 @@
 @import './brands';
 @import './types';
 @import './prices';
+@import './_footer';
 
 body {
   font-family: 'TT Lakes';
   margin: 0;
   padding: 0;
   min-width: 320px;
+
+}
+
+
+@media (min-width: 1366px){
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
 }

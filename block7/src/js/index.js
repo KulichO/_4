@@ -35,10 +35,6 @@ typesShowButton.addEventListener ('click', function(){
 });
 
 
-
-
-
-
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -49,4 +45,17 @@ const swiper = new Swiper('.swiper', {
       clickable: true,
     },
 
+  })
+
+  let burgerBtn = document.querySelector('.burger');
+  let asideMenu = document.querySelector('.sidebar');
+  let closeBtn = document.querySelector('.btn--close');
+  let backGround = document.querySelector('.main');
+
+  burgerBtn.addEventListener ('click', function(){
+    asideMenu.classList.add('sidebar--active');
+  })
+
+  closeBtn.addEventListener ('click', function(){
+    asideMenu.classList.remove('sidebar--active');
   })

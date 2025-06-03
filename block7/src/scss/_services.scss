@@ -509,12 +509,14 @@
       &__pic {
         width: 532px;
         margin-left: auto;
+        
       }
   
       &__pic-img {
         display: block;
         grid-area: info__pic;
         margin-left: auto;
+        margin-right: 20px;
         width: 360px;
         height: 208px;
         border-radius: 6px 0 0 6px;

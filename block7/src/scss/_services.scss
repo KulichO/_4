@@ -92,7 +92,7 @@
       }
     
       &__footer {
-        margin-top: 268px;
+        margin-top: 30px;
         margin-left: 24px;
       }
     
@@ -130,7 +130,7 @@
       }
     }
     
-    // Кнопки и иконки
+    // КНОПКИ
 
     .btn,
     .icon {
@@ -190,7 +190,7 @@
 
     }
     
-    // Языковой переключатель
+    // ЯЗЫКИ
     .sidebar__lang-btn {
       all: unset;
       font-size: 16px;
@@ -239,6 +239,7 @@
     z-index: 98;
   }
 
+  // МЕНЮ
   
   .menu {
     padding: 24px 16px;
@@ -374,14 +375,16 @@
       overflow: hidden;
       line-height: 18px;
       letter-spacing: 0.2px;
+
+      &--active {
+        height: auto;
+      }
     }
+
+
   
     &__text {
       margin: 0;
-  
-      &--hidden {
-        display: none;
-      }
     }
   
     &__next {
@@ -389,22 +392,48 @@
       justify-content: flex-start;
       align-items: center;
       margin-bottom: 16px;
+      font-size: 16px;
+      height: 24px;
+      margin: 0;
   
-      &-text {
+      &-btn--read {
+        background: none;
+        border: none;
+        font-family: $font;
         font-size: 16px;
         height: 24px;
         margin: 0;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          background-image: url('../img/next.svg');
+          background-color: $main-color;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 8px;
+          height: 11px;
+          margin-left: 0;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+
       }
-  
-      &-btn {
-        @include button-icon('next.svg');
+
+      &-btn--hide::before {
+        content: '';
+        display: inline-block;
+        background-image: url('../img/next.svg');
         background-color: $main-color;
-        width: 7.41px;
-        height: 10.29px;
-        border: none;
-        padding: 0;
-        margin-left: 24.29px;
-        margin-right: 16.29px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 8px;
+        height: 11px;
+        margin-left: 0;
+        margin-right: 10px;
+        transform: rotate(180deg);
       }
     }
   
@@ -451,13 +480,9 @@
   
     .info {
       margin: 32px 24px 20px 24px;
-      // width: 100%;
       width: auto;
-      // height: 208px;
-      height: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      // gap: auto;
       grid-template-areas: "info__block info__pic";
   
       &__block {
@@ -466,12 +491,15 @@
         height: 160px;
         margin: 0;
         padding: 0;
+
+        &--active {
+          height: 290px;
+        }
       }
   
       &__next {
         grid-area: info__block;
         align-self: end;
-        margin-bottom: 20px;
   
         &-btn {
           margin-left: 10px;
@@ -495,6 +523,12 @@
       &__text--hidden {
         display: block;
         margin-top: 30px;
+      }
+    }
+
+    .sidebar {
+      &__footer {
+        margin-top: 268px;
       }
     }
 
@@ -556,6 +590,10 @@
       &__block {
         width: 490px;
         height: 175px;
+
+        &--active {
+          height: 320px;
+        }
       }
   
       &__text {

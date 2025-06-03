@@ -38,7 +38,21 @@ typesShowButton.addEventListener ('click', function(){
 
 });
 
+// ЧИТАТЬ ДАЛЕЕ ТЕКСТ
 
+let textShowButton = document.querySelector('.info__next-btn--read');
+let textBlock = document.querySelector('.info__block');
+
+textShowButton.addEventListener('click', function(){
+    textShowButton.classList.toggle('info__next-btn--hide');
+    textBlock.classList.toggle('info__block--active');
+
+    if (textShowButton.classList.contains('info__next-btn--hide')){
+        textShowButton.textContent = 'Скрыть';
+    } else {
+        textShowButton.textContent = 'Читать далее';
+    }
+})
 
 //   СВАЙПЕР
 
